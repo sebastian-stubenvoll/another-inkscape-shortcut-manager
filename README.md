@@ -6,4 +6,6 @@ Yet another macOS implementation of [gillescastell's inkscape shortcut manager](
 
 When saving and inserting objects or styles, [choose](https://github.com/chipsenkbeil/choose/tree/master) is invoked. The styles and objects are saved under `~/.config/inkscape/styles` and `~/.config/inkscape/objects` respectively.
 
+If you're running into issues implementing a version of this check out [issue #1](https://github.com/sebastian-stubenvoll/another-inkscape-shortcut-manager/issues/1). It contains a brief description of some problems I ran into and how I solved them. Maybe it'll help :)
+
 ![example_gif](https://github.com/sebastian-stubenvoll/another-inkscape-shortcut-manager/blob/main/example.gif)
