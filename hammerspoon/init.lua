@@ -181,10 +181,6 @@ function paste_style(name)
     local folderPath = os.getenv("HOME") .. "/.config/inkscape/styles"
     local path = folderPath .. "/" .. name .. ".svg"
     if not setup_paste(path) then return end
-    --wait briefly before pasting
-    --maybe this can be removed, though it is safer to give the os more time
-    --to write to the pasteboard
-    os.execute("sleep 0.2")
     hs.eventtap.keyStroke({"shift" , "cmd"}, "v")
 end
 
@@ -204,5 +200,9 @@ function setup_paste(path)
     end
     file:close()
     hs.pasteboard.writeDataForUTI("dyn.ah62d4rv4gu80w5pbq7ww88brrf1g065dqf2gnppxs3xu", svg)
+    --wait briefly before pasting
+    --maybe this can be removed, though it is safer to give the os more time
+    --to write to the pasteboard
+    os.execute("sleep 0.2")
     return true
 end
